@@ -2,9 +2,10 @@
   "expo": {
     "name": "PerfectPlanner",
     "slug": "PerfectPlanner",
-    "version": "1.0.0",
-    "orientation": "portrait",
+    "version": "0.1.0",
+    "orientation": "default",
     "icon": "./assets/icon.png",
+    "platforms": ["android"],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -13,14 +14,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "icon": "./assets/ic_stat_ac_unit.png",
+      "useNextNotificationsApi": true,
+      "package": "com.escalion.InterDB"
     }
   }
 }

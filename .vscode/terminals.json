@@ -1,0 +1,20 @@
+{
+  "autorun": false,
+  "terminals": [
+    {
+      "name": "Android Start",
+      "focus": true,
+      "command": "expo start --android"
+    },
+    {
+      "name": "Android Start with clear chache",
+      "focus": true,
+      "command": "expo r -c"
+    },
+    {
+      "name": "Build APK",
+      "focus": true,
+      "command": "expo build:android -t apk"
+    }
+  ]
+}
