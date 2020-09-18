@@ -1,7 +1,7 @@
 import * as SQLite from "expo-sqlite"
 import dbTemplate from "./dbTemplate"
 
-const DBName = "events2.db"
+const DBName = "perfectplanner.db"
 
 let db = SQLite.openDatabase(DBName)
 
@@ -38,16 +38,16 @@ export const dbTemplateToSqlFull = () => {
 
 export class DB {
   static init() {
-    const tables = Object.keys(dbTemplate)
-    tables.forEach(async (table) => {
-      await new Promise((resolve, reject) =>
-        db.transaction((tx) => {
-          tx.executeSql(dbTemplateToSql(table), [], resolve, (_, error) =>
-            reject(error)
-          )
-        })
-      )
-    })
+    // const tables = Object.keys(dbTemplate)
+    // tables.forEach(async (table) => {
+    //   await new Promise((resolve, reject) =>
+    //     db.transaction((tx) => {
+    //       tx.executeSql(dbTemplateToSql(table), [], resolve, (_, error) =>
+    //         reject(error)
+    //       )
+    //     })
+    //   )
+    // })
 
     return true
   }

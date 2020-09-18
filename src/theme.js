@@ -25,6 +25,7 @@ const THEME = {
       primary: "rgb(46, 46, 48)",
       text: "rgb(30, 30, 30)",
       inverseText: "rgb(226, 226, 226)",
+      disabled: "rgb(180, 180, 182)",
     },
     dark: false,
   },

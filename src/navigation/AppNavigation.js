@@ -9,7 +9,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs"
 import { createDrawerNavigator } from "@react-navigation/drawer"
 import { Ionicons } from "@expo/vector-icons"
-import { DevScreen } from "../screens/DevScreen"
+import DevScreen from "../screens/DevScreen"
+import DevTableScreen from "../screens/DevTableScreen"
 import YearScreen from "../screens/YearScreen"
 import MonthScreen from "../screens/MonthScreen"
 
@@ -18,6 +19,7 @@ import THEME from "../theme"
 
 const Stack = createStackNavigator()
 const PlannerStack = createStackNavigator()
+const DevStack = createStackNavigator()
 
 const burgerButton = (navigation) => (
   <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
@@ -71,7 +73,7 @@ const PlanerStackScreen = ({ navigation }) => (
 )
 
 const DevStackScreen = ({ navigation }) => (
-  <StackNavigator navigation={navigation} initialRouteName="Main">
+  <DevStack.Navigator navigation={navigation} initialRouteName="DevDB">
     <DevStack.Screen
       name="DevDB"
       component={DevScreen}
@@ -84,7 +86,7 @@ const DevStackScreen = ({ navigation }) => (
       name="DevColumn"
       component={DevColumnScreen}
     /> */}
-  </StackNavigator>
+  </DevStack.Navigator>
 )
 
 // const Tabs = createMaterialBottomTabNavigator()
@@ -130,14 +132,14 @@ const DrawerScreen = () => {
   return (
     <Drawer.Navigator
       drawerType="slide"
-      drawerContentOptions={
-        {
-          // activeTintColor: "#fff",
-          // labelStyle: {
-          //   fontFamily: "open-bold",
-          // },
-        }
-      }
+      // drawerContentOptions={
+      //   {
+      //     // activeTintColor: "#fff",
+      //     // labelStyle: {
+      //     //   fontFamily: "open-bold",
+      //     // },
+      //   }
+      // }
     >
       <Drawer.Screen
         name="Planer"
